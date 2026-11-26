@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mon IA</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="app">
+  <aside id="side">
+    <div class="brand"><span class="logo">✦</span> Mon IA</div>
+    <button id="new" class="btn primary">+ Nouvelle discussion</button>
+    <div id="list"></div>
+    <button id="openSet" class="btn">⚙ Clés API</button>
+  </aside>
+  <div id="shade"></div>
+  <main>
+    <header>
+      <button id="menu" class="icon" aria-label="Menu">☰</button>
+      <select id="prov" aria-label="Fournisseur"></select>
+      <select id="model" aria-label="Modèle"></select>
+      <button id="refresh" class="icon" title="Actualiser la liste des modèles" aria-label="Actualiser">↻</button>
+    </header>
+    <div id="chat"></div>
+    <div class="composer">
+      <div class="box">
+        <textarea id="inp" rows="1" placeholder="Écris ton message…"></textarea>
+        <button id="send" class="send" aria-label="Envoyer">↑</button>
+      </div>
+    </div>
+  </main>
+</div>
+<dialog id="set">
+  <h2>Clés API</h2>
+  <p class="mut">Tes clés restent dans ce navigateur. Elles ne sont envoyées qu’au fournisseur choisi.</p>
+  <div id="keys"></div>
+  <button id="closeSet" class="btn primary">Fermer</button>
+</dialog>
+<div id="toast"></div>
+<script src="js/markdown.js"></script>
+<script src="js/providers.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
